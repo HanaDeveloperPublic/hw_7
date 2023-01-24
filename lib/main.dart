@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'pages/categories.dart';
+import 'package:hw_7/pages/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      home: const Categories(),
+      home: const Login(),
     );
   }
 }

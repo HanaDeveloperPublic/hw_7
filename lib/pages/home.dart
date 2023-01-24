@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hw_7/pages/categories.dart';
+import 'package:hw_7/pages/product_list.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -39,6 +41,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          leading: const Text(""),
           toolbarHeight: 100.10, //set your height
           flexibleSpace: SafeArea(
             child: Container(
@@ -54,10 +57,6 @@ class _HomeState extends State<Home> {
                           height: 40,
                           width: 320,
                           decoration: BoxDecoration(
-                            // border: Border.all(
-                            //   color: Colors.purpleAccent,
-                            //   width: 1.0,
-                            // ),
                             borderRadius: BorderRadius.circular(20.0),
                             color: Colors.grey.withOpacity(0.2),
                             shape: BoxShape.rectangle,
@@ -79,7 +78,14 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
-                      const Icon(Icons.blender_outlined),
+                      InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const Categories()),
+                            );
+                          },
+                          child: const Icon(Icons.blender_outlined)),
                     ],
                   ),
                   const Padding(
@@ -117,17 +123,11 @@ Widget buildCard({required BuildContext context, required Splash splash}) => Row
           children: [
             Material(
               child: InkWell(
-                // onTap: () {
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) => ProductDetails(pro: product)),
-                //   );
-                // },
                 child: Stack(children: [
                   Container(
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: Colors.purpleAccent,
+                        color: const Color(0xFF4f35e2),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(5.0),
@@ -141,6 +141,12 @@ Widget buildCard({required BuildContext context, required Splash splash}) => Row
                     ),
                   ),
                 ]),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ProductList()),
+                  );
+                },
               ),
             ),
             Row(
@@ -164,17 +170,11 @@ Widget buildCard({required BuildContext context, required Splash splash}) => Row
           children: [
             Material(
               child: InkWell(
-                // onTap: () {
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) => ProductDetails(pro: product)),
-                //   );
-                // },
                 child: Stack(children: [
                   Container(
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color: Colors.purpleAccent,
+                        color: const Color(0xFF4f35e2),
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(5.0),

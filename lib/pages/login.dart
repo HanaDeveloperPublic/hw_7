@@ -49,7 +49,7 @@ class Login extends StatelessWidget {
                 const SizedBox(
                   height: 4,
                 ),
-                Email("assets/images/shop.png", "Shop Network", "judy.mobbin@gmail.com"),
+                Container(child: Email("assets/images/shop.png", "Shop Network", "judy.mobbin@gmail.com")),
                 const Divider(
                   height: 1,
                   color: Colors.grey,

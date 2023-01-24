@@ -82,11 +82,11 @@ Widget buildCard({required BuildContext context, required Product product}) => R
                           child: FittedBox(
                             child: FloatingActionButton(
                                 elevation: 2,
-                                backgroundColor: Colors.white,
+                                backgroundColor: const Color(0xFF4f35e2),
                                 onPressed: () {},
                                 child: const Icon(
                                   Icons.favorite,
-                                  color: Colors.red,
+                                  color: Colors.white,
                                 )),
                           ))),
                 ]),
@@ -160,11 +160,11 @@ Widget buildCard({required BuildContext context, required Product product}) => R
                           child: FittedBox(
                             child: FloatingActionButton(
                                 elevation: 2,
-                                backgroundColor: Colors.white,
+                                backgroundColor: const Color(0xFF4f35e2),
                                 onPressed: () {},
                                 child: const Icon(
                                   Icons.favorite,
-                                  color: Colors.red,
+                                  color: Colors.white,
                                 )),
                           ))),
                 ]),

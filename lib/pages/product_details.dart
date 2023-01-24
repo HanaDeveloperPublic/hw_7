@@ -73,14 +73,26 @@ class ProductDetails extends StatelessWidget {
                         pro.image,
                       ),
                     ), //This
-
+                    Positioned(
+                      bottom: 75,
+                      left: 330,
+                      // left: 20,
+                      child: FloatingActionButton(
+                          elevation: 2,
+                          backgroundColor: Colors.grey.withOpacity(0.1),
+                          onPressed: () {},
+                          child: const Icon(
+                            Icons.upload,
+                            color: Colors.white,
+                          )),
+                    ),
                     Positioned(
                       bottom: 10,
                       left: 330,
                       // left: 20,
                       child: FloatingActionButton(
                           elevation: 2,
-                          backgroundColor: Colors.purpleAccent,
+                          backgroundColor: const Color(0xFF4f35e2),
                           onPressed: () {},
                           child: const Icon(
                             Icons.favorite,
@@ -99,7 +111,7 @@ class ProductDetails extends StatelessWidget {
                 child: Text(
                   pro.name,
                   textAlign: TextAlign.left,
-                  style: const TextStyle(color: Colors.purpleAccent, fontWeight: FontWeight.w600, fontSize: 28),
+                  style: const TextStyle(color: Color(0xFF4f35e2), fontWeight: FontWeight.w600, fontSize: 28),
                 ),
               ),
               const SizedBox(
@@ -113,14 +125,14 @@ class ProductDetails extends StatelessWidget {
                       pro.description,
                       textAlign: TextAlign.left,
                       style: TextStyle(
-                          color: Colors.purpleAccent.withOpacity(0.5), fontWeight: FontWeight.w600, fontSize: 20),
+                          color: const Color(0xFF4f35e2).withOpacity(0.5), fontWeight: FontWeight.w600, fontSize: 20),
                     ),
                   ),
                   Text(
                     pro.price.toString(),
                     textAlign: TextAlign.left,
                     style: TextStyle(
-                        color: Colors.purpleAccent.withOpacity(0.5), fontWeight: FontWeight.bold, fontSize: 24),
+                        color: const Color(0xFF4f35e2).withOpacity(0.5), fontWeight: FontWeight.bold, fontSize: 24),
                   ),
                 ],
               ),
